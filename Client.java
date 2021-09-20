@@ -25,7 +25,7 @@ public class Client {
 			while (true) {
 				System.out.print("$: ");
 				String[] userInput = userInputReader.readLine().split(" ");
-				String fileName = "HtmlFile.html";
+				String fileName = "HtmlFile";
 
 				sendMessage(writer, userInput[0]);
 
@@ -45,7 +45,7 @@ public class Client {
 				
 				if ((file = new File(fileName)).exists()) {
 					int fileNumber;
-					for (fileNumber = 1; (file = new File(fileName + "(" + fileNumber + ")")).exists(); fileNumber ++);
+					for (fileNumber = 1; (file = new File(fileName + "(" + fileNumber + ")" + ".html")).exists(); fileNumber ++);
 				}
 				
 				file.createNewFile();
